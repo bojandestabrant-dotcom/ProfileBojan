@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fadhali Bojan</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
   /* RESET */
@@ -34,8 +34,36 @@ body{
   padding:20px;
 }
 
+/* CAMERA DECOR */
+.camera-decor{
+  position:absolute;
+  width:90px;
+  opacity:0.9;
+  filter:drop-shadow(0 4px 6px rgba(0,0,0,0.25));
+  transition:0.3s;
+  z-index:2;
+}
+
+.camera-decor:hover{
+  transform:scale(1.08) rotate(5deg);
+}
+
+/* POSISI */
+.camera1{
+  top:10px;
+  right:10px;
+  transform:rotate(12deg);
+}
+
+.camera2{
+  bottom:-15px;
+  left:-15px;
+  transform:rotate(-10deg);
+}
+
 /* BOARD */
 .board{
+  position:relative;
   background: linear-gradient(145deg, #d9a86c, #b9854d);
   width:100%;
   max-width:900px;
@@ -131,13 +159,51 @@ body{
 
 /* CONTACT */
 .contact{
-  background:#fff8dc;
-  border-radius:12px;
-  padding:15px;
-  font-size:13px;
-  box-shadow:0 6px 12px rgba(0,0,0,0.2);
   position:relative;
-  transition:0.3s;
+
+  background:transparent;
+  box-shadow:none;
+  border:none;
+
+  width:290px;
+  height:190px;
+
+  padding:38px 35px 20px 58px;
+
+  font-size:13px;
+  color:#111;
+
+  overflow:visible;
+}
+
+/* GESER CONTACT + NOMOR */
+.contact b,
+.contact p:first-of-type{
+  position:relative;
+  left:px;
+}
+
+.contact::before{
+  content:"";
+  position:absolute;
+
+  top:-23px;
+  left:-5px;
+
+  width:100%;
+  height:100%;
+
+  background:url("contact-bg.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:left top;
+
+  z-index:0;
+}
+
+.contact *{
+  position:relative;
+  z-index:2;
 }
 
 .contact:hover{
@@ -183,9 +249,10 @@ body{
 
 /* TITLE */
 .title{
-  font-family:'Permanent Marker';
-  font-size:28px;
+  font-family:'Press Start 2P', cursive;
+  font-size:22px;
   color:#1a6bbf;
+  line-height:1.5;
 }
 
 .subtitle{
@@ -314,6 +381,10 @@ body{
 
 <div class="board">
 
+  <!-- CAMERA DECOR -->
+<img src="camera.png" class="camera-decor camera1">
+<img src="camera2.png" class="camera-decor camera2">
+
 <div class="container">
 
 <!-- LEFT -->
@@ -327,13 +398,14 @@ body{
     <div class="role">Student</div>
   </div>
 
-  <div class="contact">
-    <b>Contact</b>
-    <p>📞 +62-082227006362</p>
-    <p>📧 bojandestabrant@gmail.com</p>
-    <p>📅 28/03/2009</p>
-    <p>📍 Bogor, Jawa Barat</p>
-  </div>
+<div class="contact">
+  <b class="contact-title">Contact</b>
+
+  <p class="phone">📞 +62-082227006362</p>
+  <p>📧 bojandestabrant@gmail.com</p>
+  <p>📅 28/03/2009</p>
+  <p>📍 Bogor, Jawa Barat</p>
+</div>
 
 </div>
 <!-- RIGHT -->
@@ -390,9 +462,9 @@ body{
   <div class="section-box">
     <h2 class="title">Experience</h2>
     <div class="desc">
-      <p>🔧 PC Building</p>
-      <p>💻 Coding</p>
-      <p>🎬 Content Creator</p>
+      <p>Mobile legend Immortal 104</p>
+      <p>Valorant Silver 2</p>
+      <p>Doomscrolling tiktok, instagram</p>
     </div>
   </div>
 </div>
