@@ -374,6 +374,46 @@ body{
     grid-template-columns:1fr;
   }
 }
+  /* MOBILE VERSION */
+@media(max-width:768px){
+
+  .container{
+    grid-template-columns:1fr;
+  }
+
+  /* CONTACT CLEAN MOBILE */
+  .contact{
+    width:100%;
+    height:auto;
+
+    padding:18px 20px;
+
+    background:#f5f5f5;
+    border-radius:18px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+
+    margin-top:5px;
+
+    font-size:14px;
+  }
+
+  /* HAPUS KERTAS */
+  .contact::before{
+    display:none;
+  }
+
+  .contact b,
+  .contact p:first-of-type{
+    left:0;
+  }
+
+  .contact p{
+    margin:10px 0;
+  }
+
+}
+  
 </style>
 </head>
 
